@@ -1,3 +1,4 @@
+#This script reads data from June 2018 and June 2019, and analyzes the year over year change in routes travelled. The final report is sorted from largest decline to largest growth.
 def bubblesort(l):
     for a in range(len(l)):
         for b in range(len(l)):
@@ -8,7 +9,7 @@ def bubblesort(l):
     return l
 import csv
 l=[]
-resultsfile=open("routeresults.txt", "w")
+resultsfile=open("routegrowthresults.txt", "w")
 totals=[]
 for i in range(266):
     l.append([])

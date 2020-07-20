@@ -1,3 +1,4 @@
+#This script reads data from June 2018 and June 2019, and analyzes the year over year change in hails from each zone. The final report is sorted from largest decline to largest growth.
 def bubblesort(l):
     for a in range(len(l)):
         for b in range(len(l)):
@@ -8,7 +9,7 @@ def bubblesort(l):
     return l
 import csv
 l=[]
-resultsfile=open("hailresults.txt", "w")
+resultsfile=open("hailgrowthresults.txt", "w")
 totals=[]
 for i in range(266):
     l.append([0, 0])

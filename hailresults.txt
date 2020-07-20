@@ -1,240 +1,262 @@
-Trips from 191 progressed [1099, 485]
-Trips from 255 progressed [27384, 12196]
-Trips from 112 progressed [10556, 4920]
-Trips from 190 progressed [1649, 774]
-Trips from 264 progressed [123115, 59303]
-Trips from 256 progressed [14256, 6910]
-Trips from 175 progressed [265, 132]
-Trips from 32 progressed [981, 502]
-Trips from 51 progressed [2009, 1035]
-Trips from 180 progressed [429, 223]
-Trips from 49 progressed [10631, 5527]
-Trips from 149 progressed [1082, 566]
-Trips from 259 progressed [737, 392]
-Trips from 181 progressed [28661, 15416]
-Trips from 106 progressed [3335, 1797]
-Trips from 253 progressed [280, 152]
-Trips from 189 progressed [4424, 2406]
-Trips from 228 progressed [2567, 1404]
-Trips from 37 progressed [4165, 2298]
-Trips from 101 progressed [386, 214]
-Trips from 36 progressed [3169, 1757]
-Trips from 18 progressed [1452, 818]
-Trips from 17 progressed [7445, 4221]
-Trips from 223 progressed [18069, 10288]
-Trips from 183 progressed [498, 284]
-Trips from 174 progressed [2045, 1168]
-Trips from 81 progressed [979, 560]
-Trips from 40 progressed [9393, 5386]
-Trips from 177 progressed [1990, 1145]
-Trips from 25 progressed [25986, 15035]
-Trips from 57 progressed [174, 101]
-Trips from 123 progressed [1422, 826]
-Trips from 19 progressed [430, 250]
-Trips from 217 progressed [1300, 756]
-Trips from 185 progressed [1127, 656]
-Trips from 55 progressed [2730, 1607]
-Trips from 80 progressed [8980, 5287]
-Trips from 54 progressed [684, 404]
-Trips from 78 progressed [1499, 886]
-Trips from 254 progressed [1703, 1007]
-Trips from 3 progressed [701, 417]
-Trips from 257 progressed [1055, 630]
-Trips from 220 progressed [1503, 912]
-Trips from 47 progressed [1258, 765]
-Trips from 226 progressed [22424, 13732]
-Trips from 200 progressed [566, 349]
-Trips from 235 progressed [1724, 1065]
-Trips from 26 progressed [1899, 1174]
-Trips from 4 progressed [18543, 11560]
-Trips from 136 progressed [1392, 874]
-Trips from 196 progressed [7622, 4801]
-Trips from 213 progressed [2066, 1304]
-Trips from 155 progressed [1366, 863]
-Trips from 243 progressed [6699, 4236]
-Trips from 61 progressed [9359, 5932]
-Trips from 165 progressed [1566, 994]
-Trips from 225 progressed [4043, 2607]
-Trips from 34 progressed [524, 338]
-Trips from 182 progressed [1949, 1260]
-Trips from 135 progressed [1001, 648]
-Trips from 71 progressed [1944, 1262]
-Trips from 218 progressed [923, 600]
-Trips from 129 progressed [26251, 17090]
-Trips from 14 progressed [2479, 1614]
-Trips from 227 progressed [787, 514]
-Trips from 208 progressed [810, 530]
-Trips from 91 progressed [2220, 1455]
-Trips from 66 progressed [20447, 13420]
-Trips from 35 progressed [2633, 1731]
-Trips from 7 progressed [48466, 31864]
-Trips from 232 progressed [14661, 9676]
-Trips from 38 progressed [390, 258]
-Trips from 65 progressed [28584, 18918]
-Trips from 45 progressed [20151, 13376]
-Trips from 250 progressed [1185, 787]
-Trips from 97 progressed [27684, 18401]
-Trips from 167 progressed [1456, 970]
-Trips from 33 progressed [29310, 19534]
-Trips from 39 progressed [2633, 1760]
-Trips from 169 progressed [1465, 981]
-Trips from 202 progressed [570, 382]
-Trips from 260 progressed [21735, 14600]
-Trips from 85 progressed [1361, 918]
-Trips from 179 progressed [9943, 6718]
-Trips from 11 progressed [425, 288]
-Trips from 124 progressed [513, 348]
-Trips from 212 progressed [1615, 1096]
-Trips from 128 progressed [221, 150]
-Trips from 122 progressed [485, 330]
-Trips from 64 progressed [198, 135]
-Trips from 83 progressed [4957, 3380]
-Trips from 126 progressed [912, 622]
-Trips from 173 progressed [2593, 1773]
-Trips from 16 progressed [519, 355]
-Trips from 20 progressed [829, 569]
-Trips from 242 progressed [2629, 1813]
-Trips from 76 progressed [3949, 2730]
-Trips from 178 progressed [470, 325]
-Trips from 52 progressed [11307, 7832]
-Trips from 210 progressed [3085, 2137]
-Trips from 60 progressed [701, 486]
-Trips from 62 progressed [2264, 1573]
-Trips from 127 progressed [3589, 2497]
-Trips from 224 progressed [19328, 13455]
-Trips from 145 progressed [18962, 13222]
-Trips from 121 progressed [1146, 800]
-Trips from 29 progressed [924, 646]
-Trips from 147 progressed [795, 557]
-Trips from 203 progressed [418, 294]
-Trips from 108 progressed [754, 531]
-Trips from 9 progressed [325, 229]
-Trips from 188 progressed [4646, 3282]
-Trips from 15 progressed [270, 191]
-Trips from 219 progressed [1120, 798]
-Trips from 56 progressed [2079, 1485]
-Trips from 198 progressed [875, 625]
-Trips from 77 progressed [1047, 748]
-Trips from 216 progressed [2248, 1612]
-Trips from 42 progressed [40832, 29410]
-Trips from 72 progressed [2041, 1476]
-Trips from 31 progressed [416, 302]
-Trips from 89 progressed [3875, 2816]
-Trips from 148 progressed [119752, 87134]
-Trips from 222 progressed [985, 717]
-Trips from 22 progressed [1151, 838]
-Trips from 88 progressed [37029, 26992]
-Trips from 67 progressed [487, 355]
-Trips from 46 progressed [120, 88]
-Trips from 137 progressed [111271, 81632]
-Trips from 95 progressed [21615, 15875]
-Trips from 146 progressed [12219, 8977]
-Trips from 94 progressed [602, 443]
-Trips from 41 progressed [75952, 56071]
-Trips from 247 progressed [5002, 3696]
-Trips from 87 progressed [70777, 52447]
-Trips from 107 progressed [210348, 155893]
-Trips from 144 progressed [89358, 66295]
-Trips from 79 progressed [235429, 175226]
-Trips from 159 progressed [3037, 2263]
-Trips from 82 progressed [33441, 24950]
-Trips from 234 progressed [265845, 199785]
-Trips from 170 progressed [289642, 217727]
-Trips from 244 progressed [28975, 21822]
-Trips from 134 progressed [6290, 4738]
-Trips from 114 progressed [113161, 85308]
-Trips from 113 progressed [133499, 100698]
-Trips from 138 progressed [253611, 191377]
-Trips from 240 progressed [147, 111]
-Trips from 92 progressed [6494, 4909]
-Trips from 50 progressed [83521, 63155]
-Trips from 164 progressed [207097, 157123]
-Trips from 168 progressed [4126, 3149]
-Trips from 116 progressed [22520, 17228]
-Trips from 231 progressed [152314, 116777]
-Trips from 69 progressed [3074, 2360]
-Trips from 131 progressed [657, 508]
-Trips from 98 progressed [316, 245]
-Trips from 263 progressed [160635, 124769]
-Trips from 205 progressed [1361, 1058]
-Trips from 229 progressed [167935, 130688]
-Trips from 75 progressed [104534, 81612]
-Trips from 141 progressed [200859, 157187]
-Trips from 142 progressed [255766, 200182]
-Trips from 233 progressed [121594, 95344]
-Trips from 130 progressed [12439, 9757]
-Trips from 261 progressed [51860, 40872]
-Trips from 90 progressed [152835, 120578]
-Trips from 215 progressed [1887, 1489]
-Trips from 13 progressed [83810, 66150]
-Trips from 163 progressed [229187, 181076]
-Trips from 193 progressed [8312, 6605]
-Trips from 100 progressed [177445, 141004]
-Trips from 230 progressed [285512, 227237]
-Trips from 241 progressed [925, 737]
-Trips from 239 progressed [223052, 178392]
-Trips from 125 progressed [50031, 40095]
-Trips from 102 progressed [542, 435]
-Trips from 10 progressed [3779, 3034]
-Trips from 74 progressed [84647, 67965]
-Trips from 162 progressed [307187, 246882]
-Trips from 140 progressed [147384, 118467]
-Trips from 211 progressed [67122, 54086]
-Trips from 48 progressed [280688, 226862]
-Trips from 12 progressed [4805, 3889]
-Trips from 28 progressed [1587, 1291]
-Trips from 249 progressed [168358, 137427]
-Trips from 248 progressed [851, 695]
-Trips from 238 progressed [168076, 137603]
-Trips from 195 progressed [1496, 1227]
-Trips from 21 progressed [820, 674]
-Trips from 209 progressed [18496, 15208]
-Trips from 262 progressed [99575, 82152]
-Trips from 236 progressed [318168, 262542]
-Trips from 237 progressed [356831, 295060]
-Trips from 143 progressed [96466, 79828]
-Trips from 151 progressed [75982, 62979]
-Trips from 119 progressed [1359, 1127]
-Trips from 186 progressed [290862, 242359]
-Trips from 8 progressed [144, 120]
-Trips from 192 progressed [698, 582]
-Trips from 133 progressed [939, 783]
-Trips from 68 progressed [202698, 169177]
-Trips from 258 progressed [668, 561]
-Trips from 93 progressed [3396, 2854]
-Trips from 43 progressed [139782, 118173]
-Trips from 161 progressed [326366, 276367]
-Trips from 152 progressed [14600, 12385]
-Trips from 24 progressed [28675, 24378]
-Trips from 53 progressed [295, 254]
-Trips from 139 progressed [440, 380]
-Trips from 150 progressed [448, 387]
-Trips from 197 progressed [1740, 1507]
-Trips from 160 progressed [542, 472]
-Trips from 166 progressed [67694, 59183]
-Trips from 194 progressed [712, 624]
-Trips from 158 progressed [85306, 74841]
-Trips from 171 progressed [415, 367]
-Trips from 63 progressed [609, 540]
-Trips from 73 progressed [181, 162]
-Trips from 153 progressed [424, 394]
-Trips from 246 progressed [129574, 122089]
-Trips from 58 progressed [63, 60]
-Trips from 207 progressed [511, 514]
-Trips from 120 progressed [127, 129]
-Trips from 86 progressed [262, 274]
-Trips from 132 progressed [223812, 235535]
-Trips from 265 progressed [4217, 4678]
-Trips from 1 progressed [684, 790]
-Trips from 157 progressed [824, 961]
-Trips from 117 progressed [243, 302]
-Trips from 252 progressed [199, 249]
-Trips from 201 progressed [59, 78]
-Trips from 154 progressed [78, 105]
-Trips from 115 progressed [34, 60]
-Trips from 96 progressed [74, 133]
-Trips from 206 progressed [30, 65]
-Trips from 156 progressed [29, 67]
-Trips from 70 progressed [2408, 5653]
-Trips from 118 progressed [17, 54]
-Total trips progressed [9453204, 7412076]
+9 trips from 99
+10 trips from 105
+11 trips from 2
+42 trips from 187
+44 trips from 30
+49 trips from 204
+51 trips from 5
+62 trips from 84
+69 trips from 176
+74 trips from 44
+85 trips from 109
+91 trips from 59
+92 trips from 245
+99 trips from 172
+111 trips from 27
+115 trips from 251
+118 trips from 184
+127 trips from 156
+133 trips from 214
+133 trips from 115
+139 trips from 111
+140 trips from 154
+149 trips from 221
+168 trips from 6
+170 trips from 253
+193 trips from 46
+198 trips from 206
+201 trips from 118
+202 trips from 23
+225 trips from 58
+239 trips from 8
+308 trips from 96
+394 trips from 240
+442 trips from 201
+504 trips from 120
+537 trips from 57
+558 trips from 207
+604 trips from 183
+624 trips from 128
+639 trips from 31
+675 trips from 153
+699 trips from 178
+718 trips from 101
+745 trips from 19
+784 trips from 64
+800 trips from 11
+821 trips from 122
+828 trips from 175
+858 trips from 180
+898 trips from 73
+900 trips from 9
+922 trips from 3
+923 trips from 150
+923 trips from 81
+923 trips from 15
+942 trips from 117
+946 trips from 86
+948 trips from 222
+960 trips from 108
+1043 trips from 32
+1044 trips from 94
+1046 trips from 38
+1049 trips from 60
+1125 trips from 259
+1148 trips from 34
+1228 trips from 139
+1233 trips from 20
+1250 trips from 29
+1268 trips from 192
+1285 trips from 124
+1295 trips from 147
+1309 trips from 149
+1328 trips from 250
+1341 trips from 77
+1393 trips from 185
+1396 trips from 248
+1428 trips from 21
+1439 trips from 63
+1456 trips from 67
+1464 trips from 98
+1468 trips from 16
+1480 trips from 53
+1531 trips from 203
+1542 trips from 208
+1563 trips from 78
+1569 trips from 212
+1591 trips from 126
+1644 trips from 252
+1648 trips from 51
+1673 trips from 191
+1680 trips from 47
+1713 trips from 123
+1726 trips from 174
+1733 trips from 155
+1751 trips from 194
+1752 trips from 171
+1754 trips from 254
+1795 trips from 136
+1823 trips from 190
+1845 trips from 131
+1862 trips from 182
+1892 trips from 241
+1900 trips from 85
+1911 trips from 102
+1917 trips from 18
+2016 trips from 55
+2016 trips from 22
+2154 trips from 242
+2216 trips from 165
+2224 trips from 167
+2304 trips from 210
+2365 trips from 169
+2410 trips from 227
+2438 trips from 71
+2567 trips from 258
+2584 trips from 213
+2608 trips from 218
+2609 trips from 91
+2655 trips from 235
+2666 trips from 26
+2711 trips from 72
+2738 trips from 121
+2755 trips from 54
+2756 trips from 200
+2797 trips from 133
+2805 trips from 177
+2843 trips from 35
+2878 trips from 119
+2947 trips from 215
+2957 trips from 217
+2966 trips from 205
+3076 trips from 219
+3153 trips from 202
+3311 trips from 39
+3635 trips from 160
+3636 trips from 135
+4130 trips from 220
+4140 trips from 159
+4400 trips from 257
+4458 trips from 195
+4508 trips from 62
+4570 trips from 76
+4813 trips from 157
+4816 trips from 198
+4919 trips from 28
+4997 trips from 12
+5053 trips from 106
+5361 trips from 196
+5383 trips from 69
+5522 trips from 92
+5663 trips from 247
+5701 trips from 173
+5818 trips from 83
+6011 trips from 130
+6050 trips from 228
+6193 trips from 56
+6249 trips from 93
+6415 trips from 36
+6530 trips from 197
+6635 trips from 70
+6660 trips from 14
+6736 trips from 134
+6886 trips from 10
+7242 trips from 127
+7346 trips from 52
+8029 trips from 188
+8197 trips from 89
+8716 trips from 216
+8936 trips from 168
+9029 trips from 189
+9117 trips from 193
+9356 trips from 225
+10168 trips from 40
+10656 trips from 37
+11487 trips from 146
+12788 trips from 80
+12859 trips from 66
+12994 trips from 17
+13472 trips from 179
+13481 trips from 260
+14796 trips from 82
+15649 trips from 1
+15672 trips from 65
+15718 trips from 49
+16451 trips from 243
+16664 trips from 25
+16863 trips from 97
+16870 trips from 112
+16976 trips from 95
+17049 trips from 61
+17663 trips from 152
+18133 trips from 256
+19212 trips from 45
+20476 trips from 265
+20897 trips from 209
+20998 trips from 223
+21080 trips from 255
+21089 trips from 226
+24501 trips from 33
+24800 trips from 145
+26335 trips from 129
+27137 trips from 224
+27690 trips from 24
+29242 trips from 116
+29262 trips from 88
+29544 trips from 232
+29596 trips from 181
+30434 trips from 4
+33460 trips from 261
+33936 trips from 244
+36815 trips from 125
+40013 trips from 7
+48418 trips from 42
+54804 trips from 211
+57962 trips from 87
+60880 trips from 144
+61096 trips from 41
+63570 trips from 166
+65368 trips from 151
+67823 trips from 114
+68166 trips from 264
+69304 trips from 13
+70973 trips from 148
+73493 trips from 158
+76470 trips from 132
+77360 trips from 74
+83982 trips from 50
+87518 trips from 113
+89987 trips from 262
+91997 trips from 143
+92526 trips from 137
+92802 trips from 138
+93956 trips from 43
+98653 trips from 75
+99416 trips from 90
+104604 trips from 233
+110451 trips from 100
+111210 trips from 249
+113743 trips from 231
+124485 trips from 140
+126955 trips from 229
+131402 trips from 263
+139856 trips from 107
+142076 trips from 246
+146430 trips from 164
+147265 trips from 79
+151431 trips from 238
+161250 trips from 68
+164183 trips from 163
+167814 trips from 141
+175981 trips from 234
+178051 trips from 239
+181163 trips from 186
+184405 trips from 142
+197701 trips from 48
+209990 trips from 162
+213000 trips from 230
+221656 trips from 170
+265720 trips from 237
+270744 trips from 161
+278976 trips from 236
+7412076 total
