@@ -33,3 +33,9 @@ There was an order of magnitude increase in trips from LGA(especially 70 but als
 The biggest year over year decrease was in trips to LGA(138) from Steinway(223). Presumably this is due to increasing adoption of Q70 Select Bus Service to LGA.
 
 Hails decreased by more than half in Queens Village(191), Williamsburg(255 and 256), Greenpoint(112), and Prospect Park(190). The cause of this warrants further inquiry.
+
+To do:
+    Analyze boroughroutegrowthresults.txt
+        Index results to overall decrease in trips
+        Index results to borough populations
+    Apply borough parsing code to other three scripts

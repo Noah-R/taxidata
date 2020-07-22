@@ -1,2 +1,2 @@
 
-        print(row)#
+boroughcombinations=boroughparser.getCombinations()
