@@ -6,6 +6,12 @@ Predict fare amount/number of available fares based on pickup zone, time, day, w
 
 Show results on interactive map of the city with zones drawn, inputs for day/time/weather
 
+Notes to self:
+
+There are about 90 million records for yellow and green cab trips in all months of 2019
+
+There are some 2018 records in January 2019
+
 ---
 
 This repository uses TLC trip record data, which is not uploaded here due to size constraints. It is available at https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
