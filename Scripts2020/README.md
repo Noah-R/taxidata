@@ -1,3 +1,5 @@
+These scripts tabulate data to determine which zones are most and least traveled from and traveled between, as well as which zones and combinations of zones have grown and shrunk over time.
+
 My conclusions from these scripts:
 
 Measured based on number of trips, the most common combination of pickup and dropoff zones are the four combinations of 236 and 237(Upper East Side between 3rd and 5th Avenues, 59th to 96th Streets). Trips to and from each combination were more than twice as frequent as any other combination.
