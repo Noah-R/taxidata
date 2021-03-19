@@ -4,7 +4,7 @@ import pandas
 import numpy
 import datetime
 
-chosenzone=20
+chosenzone=31
 #frames=[]
 #for i in range(265):
 data = {'TimeBucket': [], 'Amount': []}
@@ -22,6 +22,8 @@ for month in ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", 
     yellow = pandas.read_csv("Data - Yellow Cabs/yellow_tripdata_2019-"+month+".csv", header=0, usecols=["tpep_pickup_datetime", "PULocationID"])
     yellow = yellow.rename(columns={'tpep_pickup_datetime': 'datetime', 'PULocationID': 'pickupzone'})
     d=pandas.concat([green, yellow])
+    green = None
+    yellow = None
     d = d[d['pickupzone'] == chosenzone]
     d["datetime"] = pandas.to_datetime(d['datetime'], format='%Y-%m-%d %H:%M:%S')
     d["datetime"] = d["datetime"].apply(lambda x: x.replace(2000, 1, 1))
