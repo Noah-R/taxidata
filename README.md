@@ -1,7 +1,5 @@
 What I plan to do:
 
-Plot number of hails over the course of the day, for given zone, day, weather
-
 Predict fare amount/number of available fares based on pickup zone, time, day, weather
 
 Show results on interactive map of the city with zones drawn, inputs for day/time/weather

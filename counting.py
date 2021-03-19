@@ -1,4 +1,5 @@
-#This script iterates through every trip all year, and for a given zone zone(See comments to modify to count up for every zone, but it'll take forever), counts up the number of hails during each quarter hour of the day. Results are exported to graphable CSV's. 
+#This script iterates through every trip all year, and for a given zone zone(See comments to modify to count up for every zone, but it'll take forever), counts up the number of hails during each quarter hour of the day. Results are exported to graphable CSV's.
+#Further expansions of this could include narrowing results by day of week, weather, other trip metadata
 import pandas
 import numpy
 import datetime
@@ -33,7 +34,7 @@ for month in ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", 
                 frame.loc[i2,"Amount"]+=1
                 break
 
-frame.to_csv("Graphs/"+str(chosenzone)+" results.csv")
+frame.to_csv("Tables/"+str(chosenzone)+" results.csv")
 
 #for num in range(len(frames)):
-#    frames[num].to_csv("Graphs/"+str(num)+" results.csv")
+#    frames[num].to_csv("Tables/"+str(num)+" results.csv")
