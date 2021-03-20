@@ -1,10 +1,10 @@
-#This script iterates through every trip all year, and for a given set of zones, counts up the number of hails during each quarter hour of the day. Results are exported to graphable CSV's.
+#This script iterates through every trip all year, and for a given set of zones, counts up the number of hails, and the percentage of all hails, during each quarter hour of the day. Results are exported to CSV's, which are graphed in plotting.py.
 #Further expansions of this could include narrowing results by day of week, weather, other trip metadata
 import pandas
 import numpy
 import datetime
 
-chosenzones=["31", "20", "47"]
+chosenzones=["31", "20", "47", "18"]
 frames={}
 for i in range(len(chosenzones)):
     data = {'TimeBucket': [], 'Amount': []}
@@ -37,4 +37,7 @@ for month in ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", 
                 break
 
 for zone in chosenzones:
-    frames[zone].to_csv("Tables/"+zone+" results.csv")
+    frame=frames[zone]
+    total = frame["Amount"].sum()
+    frame["Percentage"] = frame["Amount"].apply(lambda x: x/total)
+    frame.to_csv("Tables/"+zone+" results.csv")
