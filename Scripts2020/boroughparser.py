@@ -1,6 +1,6 @@
 import csv
 def getZones():
-    zonefile=open("zones.csv")
+    zonefile=open("taxi_zone_lookup.csv")
     zonereader=csv.reader(zonefile)
     zones=[]
     for row in zonereader:
