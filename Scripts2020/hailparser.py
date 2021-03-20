@@ -13,8 +13,8 @@ def quicksort(list):
         i+=1
     return quicksort(list[:pivotspot])+[list[pivotspot]]+quicksort(list[pivotspot+1:])
 import csv
-y=open("yellow0619.csv")
-g=open("green0619.csv")
+y=open("yellow_tripdata_2019-06.csv")
+g=open("green_tripdata_2019-06.csv")
 resultsfile=open("hailresults.txt", "w")
 l=[]
 count=0

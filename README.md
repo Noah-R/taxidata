@@ -1,8 +1,18 @@
 What I plan to do:
 
-Predict fare amount/number of available fares based on pickup zone, time, day, weather
+Validate entries against payment type, zones 264/265, out-of-bounds data
 
-Show results on interactive map of the city with zones drawn, inputs for day/time/weather
+.describe() each month for passenger count, trip distance, pickup/dropoff datetime normalized for Jan 1st 2000, money amounts(nullify tip where payment type is cash)
+
+Predict fare amount/number of available fares based on
+    Pickup zone
+        It may help to use some continuous proxy quantity such as population density, average income, demographic composition, density/proximity of subway stops
+    Time
+    Day of week
+    Day of year(Holidays)
+    Weather
+
+Create some kind of web interface with an interactive map
 
 ---
 

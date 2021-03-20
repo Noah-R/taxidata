@@ -14,8 +14,8 @@ def quicksort(list):
     return quicksort(list[:pivotspot])+[list[pivotspot]]+quicksort(list[pivotspot+1:])
 import csv
 resultsfile=open("routeresults.txt", "w")
-y=open("yellow0619.csv")
-g=open("green0619.csv")
+y=open("yellow_tripdata_2019-06.csv")
+g=open("green_tripdata_2019-06.csv")
 l=[]
 count=0
 for i in range(266):

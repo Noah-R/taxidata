@@ -19,7 +19,8 @@ totals=[]
 startyear=18#change to 16 for fuller results, will need to reconcile inconsistent data headers
 for i in range(startyear, 20):
     count=0
-    y=open("yellow06"+str(i)+".csv")
+    y=open("yellow_tripdata_20"+str(i)+"-06.csv")
+    g=open("green_tripdata_20"+str(i)+"-06.csv")
     g=open("green06"+str(i)+".csv")
     readery=csv.reader(y)
     for row in readery:
