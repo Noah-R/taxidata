@@ -1,16 +1,18 @@
 What I plan to do:
 
-Validate entries against payment type, zones 264/265, out-of-bounds data
+Validate entries against payment type, zones 264/265, out-of-bounds data, zero distance, same zone
 
 .describe() each month for passenger count, trip distance, pickup/dropoff datetime normalized for Jan 1st 2000, money amounts(nullify tip where payment type is cash)
 
 Predict fare amount/number of available fares based on
     Pickup zone
-        It may help to use some continuous proxy quantity such as population density, average income, demographic composition, density/proximity of subway stops
+        It may help to use some tabular proxy quantity such as population density, average income, demographic composition, density/proximity of subway stops
     Time
     Day of week
     Day of year(Holidays)
     Weather
+
+Predict probabilistically, although this may not be practical
 
 Create some kind of web interface with an interactive map
 
