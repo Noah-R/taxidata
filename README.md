@@ -1,11 +1,12 @@
-What I plan to do:
+# What I plan to do:
 
 Predict fare amount based on
     Pickup zone
         Will use tabular proxy quantities
             Population/population density
             Average income
-            Demographic composition
+            Racial composition
+            Median age
     Time of day
     Day of week
     Day of year(Holidays)
@@ -39,7 +40,7 @@ The NWS collects these observations hourly, which would be more helpful for our 
 
 https://data.cityofnewyork.us/City-Government/Demographic-Profiles-of-ACS-5-Year-Estimates-at-th/8cwr-7pqn
 
-This data provides, in xlsx format, demographic information for each of New York City's Neighborhood Tabulation Areas, or NTA's. A whole bunch of information is provided, this repository only uses data on racial composition, average income, and total population.
+This data provides, in xlsx format, demographic information for each of New York City's Neighborhood Tabulation Areas, or NTA's. A whole bunch of information is provided, this repository only uses data on racial composition, average income, average age, and total population.
 
 The TLC taxi zones are roughly based on these NTA's, but many NTA's are split into multiple TLC zones, especially in Manhattan, and one TLC zone(Zone 55, Coney Island) combines two NTA's. They're also encoded differently, and as far as I could find there isn't any published list matching the two to each other, so the conversions between them are done from comparisons made, by hand, by me, by looking at two side-by-side maps. I think it's all right, but it's always possible that I mistyped or misread something.
 
