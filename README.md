@@ -1,11 +1,5 @@
 # What I plan to do
 
-Add columns
-
-    Time without date
-
-    Day of week
-
 Predict fare amount with ML
 
 Create some kind of web interface with an interactive map

@@ -13,5 +13,6 @@ for i in range(1, len(chosenzones)):
     d2=d2.rename(columns={totaltype: chosenzones[i]})
     d = pandas.merge(d, d2, on="TimeBucket")
 d["TimeBucket"] = pandas.to_datetime(d['TimeBucket'], format='%Y-%m-%d %H:%M:%S')
+d["TimeBucket"] = d["TimeBucket"].apply(lambda x: x.time())
 d.plot(x="TimeBucket", y=chosenzones)
 matplotlib.pyplot.show()
