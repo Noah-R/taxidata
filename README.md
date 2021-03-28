@@ -1,4 +1,4 @@
-# What I plan to do:
+# What I plan to do
 
 Predict fare amount based on
     Pickup zone
@@ -15,8 +15,6 @@ Predict fare amount based on
         Find min temps
 
 Create some kind of web interface with an interactive map
-
----
 
 # Datasets
 
