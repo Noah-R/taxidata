@@ -1,18 +1,12 @@
 # What I plan to do
 
-Predict fare amount based on
-    Pickup zone
-        Will use tabular proxy quantities
-            Population/population density
-            Average income
-            Racial composition
-            Median age
-    Time of day
+Add columns
+
+    Time without date
+
     Day of week
-    Day of year(Holidays)
-    Weather
-        Check data against html's
-        Find min temps
+
+Predict fare amount with ML
 
 Create some kind of web interface with an interactive map
 
