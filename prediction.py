@@ -88,13 +88,24 @@ def preprocess(filename, nrows=0):
 
     return d
 
-filenames=getfilenames()
-data=None
-for name in filenames:
-    data = pd.concat([data, preprocess(name, nrows=100)])
-data = data.dropna(axis=0)
+def makesample():
+    filenames=getfilenames()
+    data=None
+    for name in filenames:
+        rows=0
+        if("green" in name):
+            rows=500
+        elif("yellow" in name):
+            rows=5000
+        else:
+            print("something went wrong")
+        data = pd.concat([data, preprocess(name, nrows=rows)])
+    data = data.dropna(axis=0)
+    return data
 
-y = data.fare
+data = pd.read_csv("sample.csv, header=0")
+
+"""y = data.fare
 features = ['passenger_count', 'fare', 'weekday',
        'High Temperature', 'Low Temperature', 'Average Temperature',
        'Precipitation', 'Snow', 'Per Acre', 'Median Household Income',
@@ -112,6 +123,6 @@ print("Predictions for the following 5 trips:")
 print(val_X.head())
 print(model.predict(val_X.head()))
 print("Mean absolute error is "+str(mean_absolute_error(val_y, val_predictions)))
-val_X.head().to_csv("results.csv")
+val_X.head().to_csv("results.csv")"""
 
 #https://www.kaggle.com/learn/intro-to-machine-learning part 5
