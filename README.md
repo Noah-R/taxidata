@@ -1,6 +1,9 @@
 # What I plan to do
 
 Predict fare amount with ML
+    Encode time of day into night, morning, mid-day, evening
+
+Determine how temperature/precipitation affect distance/fare, controlling for other factors
 
 Create some kind of web interface with an interactive map
 
