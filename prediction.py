@@ -8,11 +8,11 @@ import random
 def getfilenames():
     filenames=[]
     for month in ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]:
-        filenames.append("Data/Data - Green Cabs/green_tripdata_2019-"+month+".csv")
         filenames.append("Data/Data - Yellow Cabs/yellow_tripdata_2019-"+month+".csv")
+        filenames.append("Data/Data - Green Cabs/green_tripdata_2019-"+month+".csv")
     return filenames
 
-def preprocess(filename, nrows=0):
+def preprocess(filename, nrows=-1):
     #if nrows is passed, exclude all but a randomly selected nrows number of rows
     linesinfile=sum(1 for line in open(filename))
     if(nrows>0 and nrows<linesinfile-1):
@@ -21,6 +21,8 @@ def preprocess(filename, nrows=0):
             exclude.append(n)
         for n in range(nrows):
             exclude.pop(random.randint(0, len(exclude)))
+    elif(nrows==0):
+        return None
     else:
         exclude=None
 
@@ -82,30 +84,42 @@ def preprocess(filename, nrows=0):
     for borough in ["Bronx", "Brooklyn", "Queens", "Manhattan", "Staten Island", "Airport"]:
         d[borough] = (d["Borough"]==borough).astype(int)
 
+    #One-hot encode time
+    six=datetime.time(hour=6)
+    nine=datetime.time(hour=9)
+    sixteen=datetime.time(hour=16)
+    twenty=datetime.time(hour=20)
+    d["Early Morning"] = (d["time"].apply(lambda x: x<six)).astype(int)
+    d["Morning Rush Hour"] = (d["time"].apply(lambda x: x>=six and x<nine)).astype(int)
+    d["Mid-Day"] = (d["time"].apply(lambda x: x>=nine and x<sixteen)).astype(int)
+    d["Evening Rush Hour"] = (d["time"].apply(lambda x: x>=sixteen and x<twenty)).astype(int)
+    d["Late Night"] = (d["time"].apply(lambda x: x>=twenty)).astype(int)
+
     #drop columns not used to predict
     d = d.drop(["PULocationID", "NTA Code", "FED HOLIDAY", "Borough", "date", "time"], axis=1)
-    #todo: make time usable
 
     return d
 
-def makesample():
+def makesample(yellowcount=5000, greencount=500):
     filenames=getfilenames()
     data=None
     for name in filenames:
-        rows=0
         if("green" in name):
-            rows=500
+            rows=greencount
         elif("yellow" in name):
-            rows=5000
+            rows=yellowcount
         else:
+            rows=0
             print("something went wrong")
-        data = pd.concat([data, preprocess(name, nrows=rows)])
+        data = pd.concat([data, preprocess(filename=name, nrows=rows)])
     data = data.dropna(axis=0)
     return data
 
-data = pd.read_csv("sample.csv, header=0")
+makesample().to_csv("sample.csv")
 
-"""y = data.fare
+"""data = pd.read_csv("sample.csv, header=0")
+
+y = data.fare
 features = ['passenger_count', 'fare', 'weekday',
        'High Temperature', 'Low Temperature', 'Average Temperature',
        'Precipitation', 'Snow', 'Per Acre', 'Median Household Income',
