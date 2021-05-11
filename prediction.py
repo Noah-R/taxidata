@@ -106,7 +106,7 @@ def preprocess(filename, nrows=-1):
 
     return d
 
-def makesample(yellowcount=5000, greencount=500):
+def makesample(yellowcount=50000, greencount=5000):
     filenames=getfilenames()
     data=None
     for name in filenames:
@@ -121,6 +121,13 @@ def makesample(yellowcount=5000, greencount=500):
         data = pd.concat([data, preprocess(filename=name, nrows=rows)])
     data = data.dropna(axis=0)
     return data
+
+def get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y):
+    model = DecisionTreeRegressor(max_leaf_nodes=max_leaf_nodes, random_state=0)
+    model.fit(train_X, train_y)
+    preds_val = model.predict(val_X)
+    mae = mean_absolute_error(val_y, preds_val)
+    return(mae)
 
 #makesample().to_csv("sample.csv")
 
@@ -140,14 +147,13 @@ train_X, val_X, train_yf, val_yf, train_yl, val_yl = train_test_split(X, yf, yl,
 fare_model = DecisionTreeRegressor(random_state=1)
 fare_model.fit(train_X, train_yf)
 
-length_model = DecisionTreeRegressor(random_state=1)
-length_model.fit(train_X, train_yl)
+for max_leaf_nodes in range(30, 100, 5):
+    my_mae = get_mae(max_leaf_nodes, train_X, val_X, train_yf, val_yf)
+    print("Fare: Max leaf nodes: %d  \t\t Mean Absolute Error:  %f" %(max_leaf_nodes, my_mae))
 
-fare_predictions = fare_model.predict(val_X)
-print("Fare mean absolute error is "+str(mean_absolute_error(val_yf, fare_predictions)))
-
-length_predictions = length_model.predict(val_X)
-print("Length mean absolute error is "+str(mean_absolute_error(val_yl, length_predictions)))
+for max_leaf_nodes in range(30, 100, 5):
+    my_mae = get_mae(max_leaf_nodes, train_X, val_X, train_yl, val_yl)
+    print("Length: Max leaf nodes: %d  \t\t Mean Absolute Error:  %f" %(max_leaf_nodes, my_mae))
 
 
-#https://www.kaggle.com/learn/intro-to-machine-learning part 5
+#https://www.kaggle.com/learn/intro-to-machine-learning part 6
