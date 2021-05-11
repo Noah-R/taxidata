@@ -126,8 +126,8 @@ def makesample(yellowcount=5000, greencount=500):
 
 data = pd.read_csv("sample.csv", header=0)
 
-y1 = data.fare
-y2 = data.length
+yf = data.fare
+yl = data.length
 features = ['passenger_count', 'weekday',
        'High Temperature', 'Low Temperature', 'Average Temperature',
        'Precipitation', 'Snow', 'Per Acre', 'Median Household Income',
@@ -135,25 +135,19 @@ features = ['passenger_count', 'weekday',
        'Asian%', 'Other%', 'Multiracial%', 'Bronx', 'Brooklyn', 'Queens',
        'Manhattan', 'Staten Island', 'Airport']
 X = data[features]
-train_X, val_X, train_y1, val_y1, train_y2, val_y2 = train_test_split(X, y1, y2, random_state = 0)
+train_X, val_X, train_yf, val_yf, train_yl, val_yl = train_test_split(X, yf, yl, random_state = 0)
 
-model1 = DecisionTreeRegressor(random_state=1)
-model1.fit(train_X, train_y1)
+fare_model = DecisionTreeRegressor(random_state=1)
+fare_model.fit(train_X, train_yf)
 
-model2 = DecisionTreeRegressor(random_state=1)
-model2.fit(train_X, train_y2)
+length_model = DecisionTreeRegressor(random_state=1)
+length_model.fit(train_X, train_yl)
 
-fare_predictions = model1.predict(val_X)
-print("Predictions for the following 5 trips:")
-print(val_X.head())
-print(model1.predict(val_X.head()))
-print("Mean absolute error is "+str(mean_absolute_error(val_y1, fare_predictions)))
+fare_predictions = fare_model.predict(val_X)
+print("Fare mean absolute error is "+str(mean_absolute_error(val_yf, fare_predictions)))
 
-length_predictions = model2.predict(val_X)
-print("Predictions for the following 5 trips:")
-print(val_X.head())
-print(model2.predict(val_X.head()))
-print("Mean absolute error is "+str(mean_absolute_error(val_y2, length_predictions)))
+length_predictions = length_model.predict(val_X)
+print("Length mean absolute error is "+str(mean_absolute_error(val_yl, length_predictions)))
 
 
 #https://www.kaggle.com/learn/intro-to-machine-learning part 5

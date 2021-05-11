@@ -1,8 +1,8 @@
 # What I plan to do
 
-Predict fare amount with ML
+Predict fare amount/length with ML
 
-Determine how temperature/precipitation affect distance/fare, controlling for other factors
+Determine how temperature/precipitation affect length/fare, controlling for other factors
 
 Create some kind of web interface with an interactive map
 
