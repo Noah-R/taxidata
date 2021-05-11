@@ -20,7 +20,7 @@ def preprocess(filename, nrows=-1):
         for n in range(1, linesinfile):
             exclude.append(n)
         for n in range(nrows):
-            exclude.pop(random.randint(0, len(exclude)))
+            exclude.pop(random.randint(0, len(exclude)-1))
     elif(nrows==0):
         return None
     else:
@@ -29,19 +29,23 @@ def preprocess(filename, nrows=-1):
     #handle header inconsistency between green/yellow
     if("yellow_tripdata" in filename):
         pickupcolumn="tpep_pickup_datetime"
+        dropoffcolumn="tpep_dropoff_datetime"
     elif("green_tripdata" in filename):
         pickupcolumn="lpep_pickup_datetime"
+        dropoffcolumn="lpep_dropoff_datetime"
     else:
         return("something is seriously wrong")
 
     #decide which columns to use
-    used_cols=[pickupcolumn, "PULocationID", "passenger_count"]
+    used_cols=[pickupcolumn, dropoffcolumn, "PULocationID", "passenger_count"]
     preprocessing_cols=["tip_amount", "total_amount","fare_amount", "trip_distance"]
 
     #read in the trip data
     d = pd.read_csv(filename, header=0, usecols=used_cols+preprocessing_cols, skiprows=exclude)
-    d = d.rename({pickupcolumn: "datetime"}, axis=1)
+    d = d.rename({pickupcolumn: "datetime", dropoffcolumn: "endtime"}, axis=1)
     d["datetime"] = pd.to_datetime(d['datetime'], format='%Y-%m-%d %H:%M:%S')
+    d["endtime"] = pd.to_datetime(d['endtime'], format='%Y-%m-%d %H:%M:%S')
+    d["length"] = d.apply(lambda row: (row["endtime"]-row["datetime"]).total_seconds(), axis=1)
     d["fare"] = d.apply(lambda row: float(row["total_amount"]) - float(row["tip_amount"]), axis=1)#fare includes meter plus all charges but does not include tips
 
     #remove rows with obvious data errors
@@ -53,6 +57,7 @@ def preprocess(filename, nrows=-1):
     d = d[d["PULocationID"]<264]
     d = d[d["trip_distance"]>0]
     d = d[d["trip_distance"]<100]
+    d = d[d["length"]>0]
     d = d.drop(preprocessing_cols, axis=1)
 
     #split datetime column into three more usable pieces
@@ -60,6 +65,7 @@ def preprocess(filename, nrows=-1):
     d["time"] = d["datetime"].apply(lambda x: x.time())
     d["weekday"] = d["datetime"].apply(lambda x: x.weekday()<5)
     d = d.drop("datetime", axis=1)
+    d = d.drop("endtime", axis=1)
 
     #join weather data along date
     joiner = pd.read_csv("Data/Data - Background Tables/Weather.csv", header=0, usecols=["MONTH", "DAY", "FED HOLIDAY", "High Temperature", "Low Temperature", "Average Temperature", "Precipitation", "Snow"])
@@ -111,32 +117,43 @@ def makesample(yellowcount=5000, greencount=500):
         else:
             rows=0
             print("something went wrong")
+        print("Starting "+name)#todo remove
         data = pd.concat([data, preprocess(filename=name, nrows=rows)])
     data = data.dropna(axis=0)
     return data
 
-makesample().to_csv("sample.csv")
+#makesample().to_csv("sample.csv")
 
-"""data = pd.read_csv("sample.csv, header=0")
+data = pd.read_csv("sample.csv", header=0)
 
-y = data.fare
-features = ['passenger_count', 'fare', 'weekday',
+y1 = data.fare
+y2 = data.length
+features = ['passenger_count', 'weekday',
        'High Temperature', 'Low Temperature', 'Average Temperature',
        'Precipitation', 'Snow', 'Per Acre', 'Median Household Income',
        'Mean Household Income', 'Median Age', 'Hispanic%', 'White%', 'Black%',
        'Asian%', 'Other%', 'Multiracial%', 'Bronx', 'Brooklyn', 'Queens',
        'Manhattan', 'Staten Island', 'Airport']
 X = data[features]
-train_X, val_X, train_y, val_y = train_test_split(X, y, random_state = 0)
+train_X, val_X, train_y1, val_y1, train_y2, val_y2 = train_test_split(X, y1, y2, random_state = 0)
 
-model = DecisionTreeRegressor(random_state=1)
-model.fit(train_X, train_y)
+model1 = DecisionTreeRegressor(random_state=1)
+model1.fit(train_X, train_y1)
 
-val_predictions = model.predict(val_X)
+model2 = DecisionTreeRegressor(random_state=1)
+model2.fit(train_X, train_y2)
+
+fare_predictions = model1.predict(val_X)
 print("Predictions for the following 5 trips:")
 print(val_X.head())
-print(model.predict(val_X.head()))
-print("Mean absolute error is "+str(mean_absolute_error(val_y, val_predictions)))
-val_X.head().to_csv("results.csv")"""
+print(model1.predict(val_X.head()))
+print("Mean absolute error is "+str(mean_absolute_error(val_y1, fare_predictions)))
+
+length_predictions = model2.predict(val_X)
+print("Predictions for the following 5 trips:")
+print(val_X.head())
+print(model2.predict(val_X.head()))
+print("Mean absolute error is "+str(mean_absolute_error(val_y2, length_predictions)))
+
 
 #https://www.kaggle.com/learn/intro-to-machine-learning part 5
