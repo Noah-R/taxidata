@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
 from sklearn.model_selection import train_test_split
 import datetime
@@ -122,8 +123,8 @@ def makesample(yellowcount=50000, greencount=5000):
     data = data.dropna(axis=0)
     return data
 
-def get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y):
-    model = DecisionTreeRegressor(max_leaf_nodes=max_leaf_nodes, random_state=0)
+def get_mae(train_X, val_X, train_y, val_y):
+    model = RandomForestRegressor(random_state=0)
     model.fit(train_X, train_y)
     preds_val = model.predict(val_X)
     mae = mean_absolute_error(val_y, preds_val)
@@ -144,16 +145,11 @@ features = ['passenger_count', 'weekday',
 X = data[features]
 train_X, val_X, train_yf, val_yf, train_yl, val_yl = train_test_split(X, yf, yl, random_state = 0)
 
-fare_model = DecisionTreeRegressor(random_state=1)
-fare_model.fit(train_X, train_yf)
+fare_mae = get_mae(train_X, val_X, train_yf, val_yf)
+print("Fare: Mean Absolute Error:  %f" %(fare_mae))
 
-for max_leaf_nodes in range(30, 100, 5):
-    my_mae = get_mae(max_leaf_nodes, train_X, val_X, train_yf, val_yf)
-    print("Fare: Max leaf nodes: %d  \t\t Mean Absolute Error:  %f" %(max_leaf_nodes, my_mae))
-
-for max_leaf_nodes in range(30, 100, 5):
-    my_mae = get_mae(max_leaf_nodes, train_X, val_X, train_yl, val_yl)
-    print("Length: Max leaf nodes: %d  \t\t Mean Absolute Error:  %f" %(max_leaf_nodes, my_mae))
+length_mae = get_mae(train_X, val_X, train_yl, val_yl)
+print("Length: Mean Absolute Error:  %f" %(length_mae))
 
 
-#https://www.kaggle.com/learn/intro-to-machine-learning part 6
+#https://www.kaggle.com/learn/intermediate-machine-learning
