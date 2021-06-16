@@ -1,8 +1,6 @@
 # What I plan to do
 
-Predict fare amount/length with ML
-
-Determine how temperature/precipitation affect length/fare, controlling for other factors
+Create an OLS regression model to predict trip fare/length based on other factors
 
 Create some kind of web interface with an interactive map
 
