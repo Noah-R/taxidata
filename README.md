@@ -1,6 +1,6 @@
 # What I plan to do
 
-Linear regression of fare amount/length against other factors
+Create an OLS regression model to predict trip fare/length based on other factors
 
 Create some kind of web interface with an interactive map
 
