@@ -1,10 +1,7 @@
 import pandas as pd
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_absolute_error
-from sklearn.model_selection import train_test_split
 import datetime
 import random
+from sklearn import linear_model
 
 def getfilenames():
     filenames=[]
@@ -123,13 +120,6 @@ def makesample(yellowcount=50000, greencount=5000):
     data = data.dropna(axis=0)
     return data
 
-def get_mae(train_X, val_X, train_y, val_y):
-    model = RandomForestRegressor(random_state=0)
-    model.fit(train_X, train_y)
-    preds_val = model.predict(val_X)
-    mae = mean_absolute_error(val_y, preds_val)
-    return(mae)
-
 #makesample().to_csv("sample.csv")
 
 data = pd.read_csv("sample.csv", header=0)
@@ -143,13 +133,9 @@ features = ['passenger_count', 'weekday',
        'Asian%', 'Other%', 'Multiracial%', 'Bronx', 'Brooklyn', 'Queens',
        'Manhattan', 'Staten Island', 'Airport']
 X = data[features]
-train_X, val_X, train_yf, val_yf, train_yl, val_yl = train_test_split(X, yf, yl, random_state = 0)
 
-fare_mae = get_mae(train_X, val_X, train_yf, val_yf)
-print("Fare: Mean Absolute Error:  %f" %(fare_mae))
-
-length_mae = get_mae(train_X, val_X, train_yl, val_yl)
-print("Length: Mean Absolute Error:  %f" %(length_mae))
-
-
-#https://www.kaggle.com/learn/intermediate-machine-learning
+fare_model = linear_model.LinearRegression()
+fare_model.fit(X, yf)
+for i in range(len(features)):
+    print(features[i]+": "+str(fare_model.coef_[i]))
+print("R2 = "+str(fare_model.score(X, yf)))
