@@ -1,7 +1,7 @@
 import pandas as pd
 import datetime
 import random
-from sklearn import linear_model
+import statsmodels.api as sm
 
 def getfilenames():
     filenames=[]
@@ -134,8 +134,6 @@ features = ['passenger_count', 'weekday',
        'Manhattan', 'Staten Island', 'Airport']
 X = data[features]
 
-fare_model = linear_model.LinearRegression()
-fare_model.fit(X, yf)
-for i in range(len(features)):
-    print(features[i]+": "+str(fare_model.coef_[i]))
-print("R2 = "+str(fare_model.score(X, yf)))
+X = sm.add_constant(X)
+faremodel = sm.OLS(yf, X).fit()
+print(faremodel.summary())
