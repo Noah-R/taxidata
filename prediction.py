@@ -2,6 +2,7 @@ import pandas as pd
 import datetime
 import random
 import statsmodels.api as sm
+import matplotlib.pyplot as plt
 
 def getfilenames():
     filenames=[]
@@ -33,6 +34,9 @@ def preprocess(filename, nrows=-1):
         dropoffcolumn="lpep_dropoff_datetime"
     else:
         return("something is seriously wrong")
+        #these lines will obviously never run but they fix some undefined warnings
+        pickupcolumn="lpep_pickup_datetime"
+        dropoffcolumn="lpep_dropoff_datetime"
 
     #decide which columns to use
     used_cols=[pickupcolumn, dropoffcolumn, "PULocationID", "passenger_count"]
@@ -120,20 +124,24 @@ def makesample(yellowcount=50000, greencount=5000):
     data = data.dropna(axis=0)
     return data
 
-#makesample().to_csv("sample.csv")
+makesample(200, 20).to_csv("sample.csv")
 
 data = pd.read_csv("sample.csv", header=0)
 
 yf = data.fare
 yl = data.length
-features = ['passenger_count', 'weekday',
+features="Mean Household Income"
+"""features = ['passenger_count', 'weekday',
        'High Temperature', 'Low Temperature', 'Average Temperature',
        'Precipitation', 'Snow', 'Per Acre', 'Median Household Income',
        'Mean Household Income', 'Median Age', 'Hispanic%', 'White%', 'Black%',
        'Asian%', 'Other%', 'Multiracial%', 'Bronx', 'Brooklyn', 'Queens',
-       'Manhattan', 'Staten Island', 'Airport']
+       'Manhattan', 'Staten Island', 'Airport']"""
 X = data[features]
 
-X = sm.add_constant(X)
-faremodel = sm.OLS(yf, X).fit()
-print(faremodel.summary())
+#X = sm.add_constant(X)
+#faremodel = sm.OLS(yf, X).fit()
+#print(faremodel.summary())
+
+plt.scatter(X, yf)
+plt.show()
