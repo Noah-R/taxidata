@@ -124,7 +124,7 @@ def makesample(yellowcount=50000, greencount=5000):
     data = data.dropna(axis=0)
     return data
 
-makesample(200, 20).to_csv("sample.csv")
+makesample(100, 10).to_csv("sample.csv")
 
 data = pd.read_csv("sample.csv", header=0)
 
