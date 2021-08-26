@@ -10,6 +10,7 @@ zones=""
 for zone in chosenzones:
     zones+=zone+", "
 zones=zones[:-2]
+zones="january"#delete
 d=pandas.read_csv("Tables-/"+zones+" results.csv", usecols=["FareBucket", totaltype])
 d.plot(x="FareBucket", y=totaltype)
 matplotlib.pyplot.show()
