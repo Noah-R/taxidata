@@ -48,7 +48,7 @@ def preprocess(filename, nrows=-1):
     d["datetime"] = pd.to_datetime(d['datetime'], format='%Y-%m-%d %H:%M:%S')
     d["endtime"] = pd.to_datetime(d['endtime'], format='%Y-%m-%d %H:%M:%S')
     d["length"] = d.apply(lambda row: (row["endtime"]-row["datetime"]).total_seconds(), axis=1)
-    d["fare"] = d.apply(lambda row: float(row["total_amount"]) - float(row["tip_amount"]), axis=1)#fare includes meter plus all charges but does not include tips
+    d["fare"] = d.apply(lambda row: float(row["total_amount"]) - float(row["tip_amount"]), axis=1)#fare includes meter plus all charges, but does not include tips
 
     #remove rows with obvious data errors
     d = d[d["datetime"]>=datetime.datetime(year=2019, day=1, month=1)]
