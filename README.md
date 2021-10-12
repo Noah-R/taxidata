@@ -1,9 +1,3 @@
-# What I plan to do
-
-Create an OLS regression model to predict trip fare/length based on other factors
-
-Create some kind of web interface with an interactive map
-
 # Datasets
 
 ## TLC Trip Records
@@ -35,3 +29,9 @@ The TLC taxi zones are roughly based on these NTA's, but many NTA's are split in
 https://www1.nyc.gov/assets/planning/download/pdf/planning-level/nyc-population/census2010/t_pl_p5_nta.pdf
 
 This data provides, in a pdf table, 2010 Census population data for each Neighborhood Tabulation Area. These population numbers are a bit older than the ones used by the American Communities Survey, but this table importantly provides acreage and density information, whereas the ACS data does not.
+
+# Room for Expansion
+
+Create an ML model to predict trip fare per hour based on other factors
+
+Create some kind of web interface with an interactive map
