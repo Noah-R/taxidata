@@ -38,6 +38,4 @@ This data provides, in a pdf table, 2010 Census population data for each Neighbo
 
 # Room for Expansion
 
-Create an ML model to predict trip fare per hour based on other factors
-
-Create some kind of web interface with an interactive map
+Unsupervised Learning to identify different types of trips, IE local trips vs commuter trips vs airport trips
