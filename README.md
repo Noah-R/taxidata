@@ -1,3 +1,9 @@
+This is a collection of projects for making sense of New York City's publicly available taxi trip data.
+
+Scripts2020 contains scripts which calculate how many trips are taken between each combination of neighborhoods. They're not the most well-organized code, I've learned a lot since then, but they led to some good insight.
+
+Scripts2021 contains scripts which graph the demand for taxis over the course of the day in a given neighborhood. It also contains some code to join the trip data with local NWS weather data and ACS demographic data. I had thought that maybe those factors at the start of a trip might be predictive of the fare at the end, but they didn't wind up having much power.
+
 # Datasets
 
 ## TLC Trip Records
