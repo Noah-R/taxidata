@@ -1,7 +1,7 @@
 import pandas as pd
 import random
 import matplotlib.pyplot as plt
-from sklearn.cluster import Kmeans
+from sklearn.cluster import KMeans
 
 def getfilenames():
     filenames=[]
@@ -35,11 +35,10 @@ def preprocess(filename, nrows=-1):
     d["fare"] = d.apply(lambda row: float(row["total_amount"]) - float(row["tip_amount"]), axis=1)
 
     #remove rows with obvious data errors
-    d = d[d["fare_amount"]>0]
-    d = d[d["fare_amount"]<300]
+    d = d[d["fare"]>0]
+    d = d[d["fare"]<300]
     d = d[d["trip_distance"]>0]
     d = d[d["trip_distance"]<100]
-    d = d.drop(preprocessing_cols, axis=1)
 
     #drop columns not used to predict
     d = d.drop(preprocessing_cols, axis=1)
@@ -62,13 +61,22 @@ def makesample(yellowcount=50000, greencount=5000):
     data = data.dropna(axis=0)
     return data
 
-makesample(1000, 100).to_csv("sample.csv")
+#makesample(1000, 100).to_csv("sample.csv", index=False)
 
 data = pd.read_csv("sample.csv", header=0)
 
-model = KMeans(
-                    n_clusters=3,
+inerts=[]
+
+for i in range(2, 15):
+    model = KMeans( n_clusters=i, 
                     init='k-means++', 
                     max_iter=500, 
-                    random_state=0)
-model.fit_predict(data)
+                    random_state=0,
+                    verbose=0)
+    preds = model.fit_predict(data)
+    print("Clusters: "+str(i))
+    print("Inertia: "+str(model.inertia_))
+    print(model.cluster_centers_)
+    inerts.append(model.inertia_)
+plt.plot(range(2, 15), inerts)
+plt.show()
