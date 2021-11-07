@@ -83,7 +83,13 @@ def graphInertia(start, end):
 
 data = pd.read_csv("sample.csv", header=0)
 
-bins = [*range(0, 25)]+[1000]
-data["bin"] = pd.cut(data['trip_distance'], bins=bins, labels=bins[:-1])
-data["bin"].value_counts(sort=False).plot()
+colname="trip_distance"
+data["bin"] = data[colname].apply(lambda x:int(x))
+bins=range(0, data["bin"].max()+1)
+values=[]
+for bin in bins:
+    subdata = data[data["bin"]==bin]
+    sum = subdata[colname].sum()
+    values.append(sum)
+plt.plot(bins, values)
 plt.show()
