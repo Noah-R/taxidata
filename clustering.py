@@ -39,6 +39,7 @@ def preprocess(filename, nrows=-1):
     d = d[d["fare"]<300]
     d = d[d["trip_distance"]>0]
     d = d[d["trip_distance"]<100]
+    d = d[d["passenger_count"]>0]
 
     #drop columns not used to predict
     d = d.drop(preprocessing_cols, axis=1)
@@ -61,22 +62,28 @@ def makesample(yellowcount=50000, greencount=5000):
     data = data.dropna(axis=0)
     return data
 
+def graphInertia(start, end):
+    inerts=[]
+
+    for i in range(start, end):
+        model = KMeans( n_clusters=i, 
+                        init='k-means++', 
+                        max_iter=500, 
+                        random_state=0,
+                        verbose=0)
+        preds = model.fit_predict(data)
+        print("Clusters: "+str(i))
+        print("Inertia: "+str(model.inertia_))
+        print(model.cluster_centers_)
+        inerts.append(model.inertia_)
+    plt.plot(range(start, end), inerts)
+    plt.show()
+
 #makesample(1000, 100).to_csv("sample.csv", index=False)
 
 data = pd.read_csv("sample.csv", header=0)
 
-inerts=[]
-
-for i in range(2, 15):
-    model = KMeans( n_clusters=i, 
-                    init='k-means++', 
-                    max_iter=500, 
-                    random_state=0,
-                    verbose=0)
-    preds = model.fit_predict(data)
-    print("Clusters: "+str(i))
-    print("Inertia: "+str(model.inertia_))
-    print(model.cluster_centers_)
-    inerts.append(model.inertia_)
-plt.plot(range(2, 15), inerts)
+bins = [*range(0, 25)]+[1000]
+data["bin"] = pd.cut(data['trip_distance'], bins=bins, labels=bins[:-1])
+data["bin"].value_counts(sort=False).plot()
 plt.show()
