@@ -80,16 +80,19 @@ def graphInertia(start, end):
     plt.show()
 
 #makesample(1000, 100).to_csv("sample.csv", index=False)
-
+print("nhaodintahobeinabeoitha")
 data = pd.read_csv("sample.csv", header=0)
 
-colname="trip_distance"
+colname="fare"
 data["bin"] = data[colname].apply(lambda x:int(x))
 bins=range(0, data["bin"].max()+1)
+total=data[colname].sum()
 values=[]
 for bin in bins:
     subdata = data[data["bin"]==bin]
     sum = subdata[colname].sum()
-    values.append(sum)
+    values.append(sum/total)
 plt.plot(bins, values)
+plt.xlabel("Fare in dollars")
+plt.ylabel("Percentage of all dollars spent")
 plt.show()
