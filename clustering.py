@@ -80,12 +80,12 @@ def graphInertia(start, end):
     plt.show()
 
 #makesample(1000, 100).to_csv("sample.csv", index=False)
-print("nhaodintahobeinabeoitha")
+
 data = pd.read_csv("sample.csv", header=0)
 
 colname="fare"
-data["bin"] = data[colname].apply(lambda x:int(x))
-bins=range(0, data["bin"].max()+1)
+data["bin"] = data[colname].apply(lambda x:min(int(x), 150))
+bins=range(0, min(data["bin"].max()+1, 151))
 total=data[colname].sum()
 values=[]
 for bin in bins:
